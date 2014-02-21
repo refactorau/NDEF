@@ -10,6 +10,11 @@ NfcAdapter::~NfcAdapter(void)
     delete shield;
 }
 
+void NfcAdapter::setPassiveActivationRetries(uint8_t maxRetries)
+{
+    shield->setPassiveActivationRetries(maxRetries);
+}
+
 void NfcAdapter::begin()
 {
     shield->begin();

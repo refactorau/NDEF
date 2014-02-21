@@ -29,6 +29,9 @@ class NfcAdapter {
         boolean tagPresent(); // tagAvailable
         NfcTag read();
         boolean write(NdefMessage& ndefMessage);
+
+        void setPassiveActivationRetries(uint8_t maxRetries);
+
         // FUTURE boolean share(NdefMessage& ndefMessage);
         // FUTURE boolean unshare();
         // FUTURE boolean erase();
